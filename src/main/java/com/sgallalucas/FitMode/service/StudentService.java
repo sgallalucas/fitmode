@@ -28,4 +28,12 @@ public class StudentService {
     public List<Student> findAll() {
         return repository.findAll();
     }
+
+    public void delete(Student student) {
+        repository.delete(student);
+    }
+
+    public void update(Student student) {
+        repository.save(student);
+    }
 }

@@ -36,4 +36,21 @@ public class StudentController {
         List<Student> list = service.findAll();
         return ResponseEntity.ok(list);
     }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> delete(@PathVariable String id) {
+        var student = service.findById(id);
+        service.delete(student.get());
+        return ResponseEntity.noContent().build();
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Void> update(@PathVariable String id, @RequestBody Student student) {
+        var optionalStudent = service.findById(id);
+        var s = optionalStudent.get();
+        s.setName(student.getName());
+        s.setEmail(student.getEmail());
+        service.update(s);
+        return ResponseEntity.noContent().build();
+    }
 }
