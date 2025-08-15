@@ -1,4 +1,4 @@
-package com.sgallalucas.FitMode.repository;
+package com.sgallalucas.FitMode.repositories;
 
 import com.sgallalucas.FitMode.model.Student;
 import org.springframework.data.jpa.repository.JpaRepository;

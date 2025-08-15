@@ -1,7 +1,7 @@
-package com.sgallalucas.FitMode.service;
+package com.sgallalucas.FitMode.services;
 
 import com.sgallalucas.FitMode.model.Student;
-import com.sgallalucas.FitMode.repository.StudentRepository;
+import com.sgallalucas.FitMode.repositories.StudentRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
